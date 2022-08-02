@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marathon Entry Form</title>
+  </head>
+  <body>
+    <!-- Title header -->
+    <h1>Race Registration!</h1>
+
+    <form action="">
+      <!-- First and last name text fields with labels and required attributes -->
+      <div>
+        <label for="firstname">First Name </label>
+        <input type="text" name="firstname" id="firstname" required />
+        <label for="lastname">Last Name </label>
+        <input type="text" name="lastname" id="lastname" required />
+      </div>
+      <p>Select a Race:</p>
+
+      <!-- A radio input with several options linked to their labels and each other for only one option at a time -->
+      <div>
+        <input type="radio" name="race" id="funrun5k" value="5k" />
+        <label for="funrun5k">Fun Run 5k</label>
+      </div>
+      <div>
+        <input type="radio" name="race" id="halfmarathon" value="half" />
+        <label for="halfmarathon">Half Marathon</label>
+      </div>
+      <div>
+        <input type="radio" name="race" id="fullmarathon" value="full" />
+        <label for="fullmarathon">Full Marathon</label>
+      </div>
+      <p></p>
+
+      <!-- Email and password fields with labels and required attributes -->
+      <!-- Minlength and maxlength attributes added for password length -->
+      <div>
+        <label for="email">Email </label>
+        <input type="email" name="email" id="email" required />
+        <label for="password">Password </label>
+        <input type="password" name="password" id="password" minlength="5" maxlength="20" required />
+      </div>
+      <p></p>
+
+      <!-- A select menu with a label and several age options -->
+      <!-- Selected attribute on empty option to function as default -->
+      <div>
+        <label for="age">Select Age Group </label>
+        <select name="age" id="age">
+          <option value="" selected>---Choose One---</option>
+          <option value="minor">Under 18</option>
+          <option value="youngadult">18-29</option>
+          <option value="adult">30-49</option>
+          <option value="elder">50+</option>
+        </select>
+      </div>
+      <p></p>
+
+      <!-- A button to submit the form -->
+      <button>Register!</button>
+    </form>
+  </body>
+</html>

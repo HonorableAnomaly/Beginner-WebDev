@@ -1,0 +1,67 @@
+body {
+  background-color: #f5d9df;
+  font-family: Nunito, sans-serif;
+}
+
+/* The div h2s that contain text outside of the main content  */
+.blurb h2 {
+  color: #ea1c2c;
+  font-weight: 100;
+  font-size: 2.5rem;
+}
+
+/* The div p */
+.blurb p {
+  color: #f498b8;
+  font-weight: 100;
+  font-size: 1.125rem;
+  line-height: 2;
+}
+
+/* Applied to container-fluid rows within the section for each row of content */
+.content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Navbar styles */
+#mainNavbar {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+#mainNavbar .navbar-brand {
+  color: #ea1c2c;
+}
+
+#mainNavbar .nav-link {
+  color: white;
+}
+
+#mainNavbar .nav-link:hover {
+  color: #ea1c2c;
+}
+
+/* Main content at the top of the page */
+#headingGroup span {
+  color: #ea1c2c;
+}
+
+#headingGroup h1 {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+/* Called by JS to trigger navbar */
+.mainNavbar.scrolled {
+  background-color: #dec0de;
+  transition: background 500ms;
+}
+
+/* Changes the font size of the primary content at the top of the page for comfortable room in responsiveness */
+@media (max-width: 1200px) {
+  #headingGroup h1 {
+    font-weight: 100;
+    font-size: 3rem;
+  }
+}

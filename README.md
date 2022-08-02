@@ -1,3 +1,3 @@
-# Beginner-WebDev
+# Essential-WebDev
 
-The essentials of HTML and CSS, JavaScript, Node.js, Express, MongoDB and other web technologies
+The basic web technologies up to advanced methods using HTML, CSS, JavaScript, Node.js, Express, MongoDB and other tools for full-scope web development.

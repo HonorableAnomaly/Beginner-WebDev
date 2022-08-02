@@ -1,0 +1,5 @@
+/* Example of cascading, overwriting the style from the first stylesheet */
+h1,
+h2 {
+  color: olivedrab;
+}

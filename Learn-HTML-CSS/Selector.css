@@ -1,0 +1,140 @@
+/* Selects everything! (Very uncommonly used)*/
+/* * {
+  background-color: cyan;
+} */
+
+/* Selects the body */
+body {
+  background-color: #f1faee;
+}
+
+/* Selects all buttons (Commonly used)*/
+button {
+  font-size: 30px;
+  background-color: #a8dadc;
+}
+
+/* Selects all h1s and H2s, (Somewhat commonly used) */
+h1,
+h2 {
+  color: #1d3557;
+}
+
+/* Selects the specific ID */
+#signup {
+  background-color: #1d3557;
+  color: #f1faee;
+}
+
+/* Selects all spans */
+span {
+  color: #457b9d;
+}
+
+/* Selects all classes labeled with "tag" */
+.tag {
+  background-color: #e63946;
+  color: #f1faee;
+  font-size: 16px;
+}
+
+/* Both of the selectors below are 'descendant selectors' */
+/* Combines selecting a class and an element nested within the class */
+.post a {
+  color: #457b9d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Selects anchor tags nested within a footer, a multi-level descendent from a footer, nav, ul, li and a */
+footer a {
+  color: #e63946;
+}
+
+/* Combinator (A selector with an adjacent selector) */
+h2 + button {
+  font-size: 20px;
+  background-color: pink;
+}
+
+/* Selector that is a direct descendent one level down from an element */
+footer > a {
+  color: #457b9d;
+}
+
+/* Attribute selector */
+input[type="password"] {
+  color: greenyellow;
+}
+
+/* Pseudo classes used to change state based on another state change */
+/* Pseudo class for button within a post when hover */
+.post button:hover {
+  background-color: #e63946;
+  color: #f1faee;
+}
+
+/* Pseudo class for anchor tag within a post when hover */
+.post a:hover {
+  text-decoration: underline;
+}
+
+/* Pseudo class for button within a post when clicked */
+.post button:active {
+  background-color: #06d6a0;
+}
+
+/* Pseudo class for every other post */
+.post:nth-of-type(2n) {
+  background-color: #dfe8dc;
+}
+
+/* Pseudo element for the first letter of all h2s */
+h2::first-letter {
+  font-size: 50px;
+}
+
+/* Pseudo element for the first line of any paragraph */
+p::first-line {
+  color: purple;
+}
+
+/* Pseudo element for anything in a paragraph that is selected */
+p::selection {
+  background-color: yellow;
+}
+
+/* Pseudo element for content that comes after a paragraph */
+p::after {
+  content: "This is special box. Special box is special.";
+  color: #1aca1a;
+  border-color: black;
+  border-style: double;
+}
+
+/* Override for cascade, overwritten by the second stylesheet */
+h1,
+h2 {
+  color: yellow;
+}
+
+/* Specificity for button hover color is overturned by the .post button color, while the font size remains due to lack of specificity.
+The color also will not override the color in the 'sign up' button because it's colored by an ID selector */
+
+/* Rules of specificity: ID > Class > Element */
+button:hover {
+  background-color: olive;
+  font-size: 10px;
+}
+
+/* NOT RECOMMENDED! Using !important auto overrides all other styles and cascades */
+
+/* button {
+  background-color: magenta !important;
+} */
+
+/* Inherit attribute can be used to cascade styles from parent elements down */
+
+/* button, input {
+  background-color: inherit;
+} */

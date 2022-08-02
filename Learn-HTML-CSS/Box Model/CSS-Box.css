@@ -1,0 +1,78 @@
+/* Common to remove all body margin for a new web page */
+body {
+  margin: 0;
+}
+
+div {
+  /* Width and height set the content box size */
+  width: 200px;
+  height: 200px;
+  background-color: #e5989b;
+}
+
+h1 {
+  background-color: pink;
+  width: 200px;
+
+  /* Padding set to single sides */
+  padding-left: 100px;
+  padding-top: 50px;
+
+  /* Margin removal to remove spacing between content boxes */
+  margin: 0;
+}
+
+#one {
+  background-color: #e5989b;
+
+  /* Need all three to get a border to appear */
+  border-width: 5px;
+  border-color: black;
+  border-style: solid;
+
+  /* Forces the border within the container box */
+  /* box-sizing: border-box; */
+
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+#two {
+  background-color: #b5838d;
+  border-width: 3px;
+  border-color: #ffcdb2;
+  border-style: dashed;
+  border-left-width: 8px;
+  padding-right: 50px;
+
+  /* All sides margin */
+  margin: 200px;
+}
+
+#three {
+  background-color: #6d6875;
+
+  /* This represents all three border requirements in one line */
+  border: 4px dotted green;
+
+  /* Additional rules can still be set to the first border rule */
+  border-left-style: solid;
+
+  /* Create circles! */
+  /* Setting each corner to various radii help to create fun trendy box shapes */
+  border-radius: 50%;
+}
+
+button {
+  /* Single value sets all 4 sides */
+  /* padding: 20px; */
+
+  /* 2 values means vertical then horizontal padding */
+  padding: 10px 20px;
+
+  /* A value of 0 can be used to pad none */
+  /* padding:  0 12px; */
+
+  /* 4 values make each padded side individual */
+  /* padding: 10px 20px 30px 40px; */
+}

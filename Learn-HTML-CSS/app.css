@@ -1,0 +1,27 @@
+/* All h2 headers */
+h2 {
+  /* hex */
+  color: #5fcffc;
+  /* rgb */
+  background-color: rgb(89, 151, 0);
+}
+
+/* All buttons */
+button {
+  color: magenta;
+  background-color: cyan;
+}
+
+/* All paragraphs */
+p {
+  color: olive;
+  /* The background property is more powerful than coupling it with an additional property, as you can use a color, image, etc with it */
+  background: orange;
+}
+
+body {
+  /* shorthand hex if the pairs are the same */
+  background-color: #c5e;
+}
+
+/* Hover over your color to bring up a color picker! */

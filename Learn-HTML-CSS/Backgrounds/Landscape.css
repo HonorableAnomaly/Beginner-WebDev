@@ -1,0 +1,35 @@
+section:first-of-type {
+  width: 80%;
+  height: 800px;
+  /* background-color: purple; */
+
+  /* Using an image address from the web */
+  background-image: url(https://images.unsplash.com/photo-1638000705481-71cfe591308a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1922&q=80);
+  /* Cover stretches the image in proper proportions to cover the container */
+  background-size: cover;
+  /* Adjusts the image to begin wherever the position is declared, in this case, starting at the left hand of the image and aligning it with the left hand of the container */
+  background-position: left;
+
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
+h2 {
+  font-size: 100px;
+  color: blue;
+}
+
+section:nth-of-type(2) {
+  width: 80%;
+  height: 800px;
+  margin: auto;
+
+  /* Background can be used to contain multiple properties and values in any order, even multiple backgrounds, except image placement and then position, like below */
+  background: center/50% no-repeat
+      url(https://images.unsplash.com/photo-1638000705481-71cfe591308a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1922&q=80),
+    cyan;
+}

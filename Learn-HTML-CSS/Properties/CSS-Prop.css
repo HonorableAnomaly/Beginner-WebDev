@@ -1,0 +1,25 @@
+section {
+  width: 500px;
+  height: 500px;
+  background-color: magenta;
+}
+
+#rgba {
+  width: 50%;
+  height: 50%;
+
+  /* The alpha channel in rgb only applies to the color it's used in */
+  background-color: rgba(255, 255, 255, 0.5);
+
+  /* The alpha channel expressed in hex is a fourth set of hex pair */
+  color: #006466ff;
+}
+
+#opacity {
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+
+  /* Opacity applies to everything in the element */
+  opacity: 0.5;
+}

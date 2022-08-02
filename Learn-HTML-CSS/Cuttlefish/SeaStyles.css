@@ -1,0 +1,24 @@
+h1 {
+  /* Text-align positions text within an element, not the entire webpage */
+  text-align: center;
+  /* 100-900 are available, but not all of them always. 400:normal, 700:bold */
+  font-weight: normal;
+  /* text-decoration controls the style of the underline property */
+  text-decoration: #be7507 wavy underline;
+  /* Spacing between individual characters */
+  letter-spacing: 15px;
+  /* Changes size of font */
+  font-size: 80px;
+  /* Changes font type, make a list with commas for a font stack. Use a font family for backup in case of a missing font on the user's device */
+  font-family: verdana, candara, sans-serif;
+}
+
+a {
+  /* Remove default underlines from links */
+  text-decoration: none;
+}
+
+p {
+  /* Spacing between lines */
+  line-height: 2;
+}

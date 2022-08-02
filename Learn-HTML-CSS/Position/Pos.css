@@ -1,0 +1,53 @@
+div {
+  width: 100px;
+  height: 100px;
+  background-color: #212f45;
+  border: 2px solid black;
+  margin: 10px;
+  display: inline-block;
+}
+
+/* Identifying the middle divs to be adjusted in contrast to the left and right divs */
+#middle {
+  background-color: #006466;
+}
+
+/* Static is default for containers and elements */
+#static #middle {
+  position: static;
+  top: 100px;
+}
+
+/* Relative adjusts based on the other content within the container itself */
+#relative #middle {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+/* Demo of a positioned ancestor for the absolute value in the div below this one, making it's position absolute to this reference */
+#absolute {
+  position: relative;
+}
+
+/* Absolute adjusts based on the ancestor container, which is always the body unless the ancestor is positioned as well (see #absolute above) */
+#absolute #middle {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+/* Fixed adjusts based on the overall containing block or body, allowing scrolling with the page to occur */
+#fixed #middle {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Sticky adjusts based on the overall containing block or body, allowing scrolling with the page to occur as well, but grabs it once the scroll hits the element */
+/* CURRENTLY BROKEN - Sticky doesn't grab */
+#sticky #middle {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}

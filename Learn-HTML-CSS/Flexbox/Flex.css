@@ -1,0 +1,96 @@
+body {
+  font-family: Open Sans, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+#container {
+  /* Flex activates the flexbox properties using the display property */
+  display: flex;
+  background-color: #003049;
+  width: 90%;
+  /* Changing properties like height allow the inside elements to change because of flexbox. Going over the set properties allows each element to hit its max, while reducing the flex shrinks the elements proportionally. */
+  /* height: 800px; */
+  margin: 0 auto;
+  border: 5px solid #003049;
+
+  /* flex-direction can be used to change the direction of the row or column */
+  flex-direction: row;
+  /* justify-content is used to change where the content aligns in the flexbox, flex-start being the default based on where the main axis is set */
+  /* space-between, space-around and space-evenly automatically calculates all empty space between elements and spreads it evenly */
+
+  /* Justify-content depends on flex-direction */
+  justify-content: center;
+  /* Align-items justifies content along the cross axis, rather than the main axis */
+  /* You can perfectly center content by using justify-content: center and align-items: center */
+  align-items: flex-start;
+
+  /* Align-items: baseline lines the content up with the bottom of text in your content so that the word reads straight across regardless of content container sizes */
+  /* align-items: baseline; */
+
+  /* Wraps content if the flexbox shrinks */
+  flex-wrap: wrap;
+  /* Align-content controls the space between or around the content, and only works with flex-wrap or flex-wrap reverse */
+  /* align-content: center; */
+}
+
+#container div {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  font-size: 4em;
+  /* Flex-basis creates a beginning standard for content, and ignores height or width properties depending on the main axis */
+  flex-basis: 200px;
+
+  /* flex-grow can be limited with max-width/length or min-width/length */
+  /* flex-grow: 1; */
+}
+
+/* justify-content, align-items, flex-direction and flex-wrap run the flexbox */
+
+/* Align-self is applied to the content itself and not the flexbox */
+/* div:nth-of-type(2) {
+  align-self: center;
+}
+
+div:nth-of-type(3) {
+  align-self: flex-end;
+} */
+
+/* Align-self can move a single item within space between the end of the flexbox and other content as well */
+
+/* Flex-grow fills up space based on a unitless number, and can be shared among any other content that has a flex-grow assigned to it */
+/* Flex-shrink essentially does the same but in reverse when there is not enough room in a container */
+div:nth-of-type(1) {
+  flex-grow: 1;
+  flex-shrink: 3;
+}
+
+div:nth-of-type(5) {
+  flex-grow: 2;
+  flex-shrink: 0;
+}
+
+h2 {
+  text-align: center;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+  border: 5px solid black;
+  height: 500px;
+  display: flex;
+}
+
+main .sidebar {
+  background-color: #693093;
+  flex: 1 2 200px;
+}
+
+main .maincontent {
+  background-color: #80ffdb;
+  flex: 2 800px;
+}

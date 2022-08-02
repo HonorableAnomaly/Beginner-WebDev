@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Demo</title>
+  </head>
+
+  <body>
+    <h1>Forms Demo</h1>
+    <!-- A button that does not auto submit because it's outside the form and is not subject to the action -->
+    <button>Outside the form</button>
+    <p></p>
+
+    <form action="/tacos/">
+      <!-- A button with the button type to avoid the auto submit -->
+      <button type="button">PLEASE DO NOT SUBMIT THE FORM!</button>
+      <p>
+        <label for="username">Enter a Username:</label>
+        <input type="text" placeholder="Username" id="username" name="name" />
+      </p>
+      <p>
+        <label for="password">Enter a Password:</label>
+        <input type="password" placeholder="Enter your password" id="password" name="password" />
+      </p>
+      <!-- A button that is subject to the form action and submits -->
+      <button>In the middle!</button>
+      <p>
+        <label for="color">Choose a Color:</label>
+        <input type="color" id="color" name="color" />
+      </p>
+      <p>
+        <!-- 'min', 'max' and 'step' can be used on the number selection -->
+        <label for="number">Pick a Number:</label>
+        <input type="number" placeholder="Enter a number" id="number" name="num" />
+      </p>
+      <p>
+        <!-- The normal submit button, even without giving it the type submit -->
+        <button>Submit</button>
+      </p>
+    </form>
+
+    <!-- hr used for page break -->
+    <hr />
+
+    <h2>Hijacking Searches</h2>
+    <p></p>
+    <h3>Google</h3>
+    <!-- The form action goes to an actual web link and the request sends it back because of the proper address -->
+    <form action="https://www.google.com/search">
+      <!-- The name value has to match what the server uses and expects, and for Google and Reddit, it's q -->
+      <input type="text" name="q" />
+      <button>Googs it my guy!</button>
+    </form>
+    <p></p>
+    <h3>Nintendo</h3>
+    <!-- Category and page were added as they are submenus within the Nintendo website search query -->
+    <form action="https://www.nintendo.com/search">
+      <input type="text" name="query" category="all" page="1" />
+      <button>Search Nintendo's game library!</button>
+    </form>
+    <p></p>
+    <h3>YouTube</h3>
+    <!-- YouTube search results are named different -->
+    <form action="https://www.youtube.com/results">
+      <input type="text" name="search_query" />
+      <button>Show me a Youtube video!</button>
+    </form>
+    <p></p>
+    <hr />
+
+    <h2>More Inputs</h2>
+    <h3>What say you?</h3>
+    <!-- Checkbox functions with labels and checked/unchecked options -->
+    <form action="/quesadillas">
+      <input type="checkbox" name="agree_tos" id="agree" checked />
+      <label for="agree">Verily and amen!</label>
+      <p></p>
+      <input type="checkbox" name="disagree_tos" id="disagree" />
+      <label for="disagree">Frick no!</label>
+      <p></p>
+
+      <h3>Shirt size:</h3>
+      <!-- Radio button functions -->
+      <input type="radio" name="size" id="extra_small" value="xs" />
+      <label for="extra_small">XS</label>
+      <input type="radio" name="size" id="small" value="s" />
+      <label for="small">S</label>
+      <input type="radio" name="size" id="medium" value="m" />
+      <label for="medium">M</label>
+      <input type="radio" name="size" id="large" value="l" />
+      <label for="large">L</label>
+      <input type="radio" name="size" id="extra_large" value="xl" />
+      <label for="extra_large">XL</label>
+      <p></p>
+
+      <h3>Meat selection:</h3>
+      <!-- Select functions -->
+      <label for="meat"></label>
+      <select name="meat" id="meat">
+        <option value="" selected>--- Choose wisely ---</option>
+        <option value="beef">Beef</option>
+        <option value="chick">Chicken</option>
+        <option value="pork">Pork</option>
+        <option value="fish">Fish</option>
+        <option value="tofu">Tofu</option>
+      </select>
+      <p>
+        <label for="Pokemon">Amount of Pokemon</label>
+        <!-- 'step' can be used to give a range intervals -->
+        <!-- 'value' can be used to give the range a beginning point other than the bottom -->
+        <input type="range" name="number of Pokemon" id="Pokemon" min="1" max="10" />
+      </p>
+
+      <p>
+        <label for="requests">Any special requests?</label>
+        <p></p>
+        <textarea name="requests" id="requests" cols="30" rows="10"></textarea>
+      </p>
+      <button>Speak</button>
+    </form>
+
+    <h2>Validation Demo</h2>
+    <!-- useful attributes for making forms, like 'required', 'minlength', 'maxlength' -->
+    <!-- useful input types such as 'text', 'password', 'email', 'url', 'tel' -->
+
+    <!-- Hold 'alt' and click different lines to create multiple cursors in order to add the same code to multiple lines!!! -->
+    <form action="/dummy">
+      <label for="first">Enter your first name: </label>
+      <input type="text" name="first" id="first" required>
+      <p>
+      <label for="username">Enter a username:</label>
+      <input type="text" name="username" id="username" minlength="5" maxlength="20" required>
+      </p>
+      <p>
+        <label for="email">Enter an email:</label>
+        <input type="email" name="email" id="email" required>
+      </p>
+      <p>
+        <label for="password">Enter a password:</label>
+        <input type="password" name="password" id="password" minlength="5" maxlength="20" required>
+      </p>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

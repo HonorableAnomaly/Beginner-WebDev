@@ -1,0 +1,34 @@
+h1 {
+  background-color: paleturquoise;
+  border: 1px solid black;
+
+  /* Block elements respect the width, height, padding and margin values */
+  width: 300px;
+  height: 200px;
+  padding: 50px;
+  margin: 100px;
+
+  /* You can set display to none to turn elements off. USEFUL IN JS!!! */
+  /* display: none; */
+}
+
+span {
+  background-color: palevioletred;
+  border: 1px solid black;
+
+  /* Inline elements ignore much of the below properties and the spacing is not respected */
+  width: 500px;
+  margin: 50px;
+  padding: 50px;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: olivedrab;
+  border: 5px solid black;
+  margin: 50px;
+
+  /* Inline-block allows inline elements to give the respect of width, height, padding and margin like block elements do */
+  display: inline-block;
+}

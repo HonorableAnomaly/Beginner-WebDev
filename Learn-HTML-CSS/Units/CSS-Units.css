@@ -1,0 +1,95 @@
+/* #ems, #percentages and #rems were added to avoid conflicts of styling in demo */
+
+html {
+  /* Changing the font-size of the entire document affects rems! */
+  font-size: 20px;
+}
+
+section {
+  background-color: #6d6875;
+  width: 800px;
+  height: 800px;
+}
+
+#percentages {
+  font-size: 15px;
+}
+
+#percentages div {
+  background-color: #e5989b;
+
+  /* Percentages for width and height are in reference to the parent element */
+  width: 70%;
+  height: 20%;
+}
+
+#ems {
+  font-size: 15px;
+}
+
+#ems h1 {
+  font-size: 40px;
+  border: 1px solid black;
+
+  /* Percentages for line-height are in reference to the element itself (font-size for instance) */
+  line-height: 200%;
+}
+
+#ems article {
+  font-size: 20px;
+}
+
+#ems h2 {
+  /* Ems are relative to the parent element, in this case, 2x the units of font-size to the articles, where the h2 is nested */
+  font-size: 2em;
+
+  /* Ems for margin are relative to the font-size of the element itself, in this case, half of what was calculated from the parent (article) */
+  margin-left: 1em;
+}
+
+#ems p {
+  /* Ems inherited from the parent (article) as well */
+  font-size: 0.8em;
+}
+
+#ems h3 {
+  font-size: 1.5em;
+}
+
+button {
+  background-color: #006d77;
+  color: white;
+
+  /* Adjusting size to increase or decrease relative to pixels DOES NOT maintain proportions of all elements! Ems are better for this purpose */
+  /* font-size: 30px;
+  padding: 0 30px;
+  border-radius: 15px; */
+
+  /* Here, we use ems to increase and decrease proporionally. Increasing or decreasing the parent (article) font size keeps everything correct */
+  font-size: 1em;
+  padding: 0 1em;
+  border-radius: 0.5em;
+}
+
+#ems ul {
+  /* Nested elements suffer from multiplied effects of ems, in this case, ul within ul within ul */
+  font-size: 1.5em;
+}
+
+/* Setting up rems helps everything scale well, including nested elements */
+#rems h2 {
+  font-size: 3rem;
+}
+
+#rems h3 {
+  font-size: 2rem;
+}
+
+#rems ul {
+  /* No snowballing effect!! */
+  font-size: 0.8rem;
+}
+
+#rems button {
+  font-size: 1.5rem;
+}
